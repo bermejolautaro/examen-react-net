@@ -1,0 +1,21 @@
+.form-container {
+  display: flex;
+  max-width: 800px;
+  justify-content: center;
+}
+
+.form-row {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-row > input, textarea, select, option {
+  width: 100%;
+}
+
+.model-textarea {
+  resize: vertical;
+}
