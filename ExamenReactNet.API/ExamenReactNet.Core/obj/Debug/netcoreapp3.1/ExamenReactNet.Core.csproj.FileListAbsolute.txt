@@ -1,0 +1,16 @@
+C:\Users\Lautaro\Documents\projects\ExamenReact+Net\ExamenReactNet\ExamenReactNet.Core\bin\Debug\netcoreapp3.1\ExamenReactNet.Core.deps.json
+C:\Users\Lautaro\Documents\projects\ExamenReact+Net\ExamenReactNet\ExamenReactNet.Core\bin\Debug\netcoreapp3.1\ExamenReactNet.Core.dll
+C:\Users\Lautaro\Documents\projects\ExamenReact+Net\ExamenReactNet\ExamenReactNet.Core\bin\Debug\netcoreapp3.1\ExamenReactNet.Core.pdb
+C:\Users\Lautaro\Documents\projects\ExamenReact+Net\ExamenReactNet\ExamenReactNet.Core\obj\Debug\netcoreapp3.1\ExamenReactNet.Core.csprojAssemblyReference.cache
+C:\Users\Lautaro\Documents\projects\ExamenReact+Net\ExamenReactNet\ExamenReactNet.Core\obj\Debug\netcoreapp3.1\ExamenReactNet.Core.AssemblyInfoInputs.cache
+C:\Users\Lautaro\Documents\projects\ExamenReact+Net\ExamenReactNet\ExamenReactNet.Core\obj\Debug\netcoreapp3.1\ExamenReactNet.Core.AssemblyInfo.cs
+C:\Users\Lautaro\Documents\projects\ExamenReact+Net\ExamenReactNet\ExamenReactNet.Core\obj\Debug\netcoreapp3.1\ExamenReactNet.Core.dll
+C:\Users\Lautaro\Documents\projects\ExamenReact+Net\ExamenReactNet\ExamenReactNet.Core\obj\Debug\netcoreapp3.1\ExamenReactNet.Core.pdb
+C:\Users\Lautaro\Documents\projects\ExamenReactNet\ExamenReactNet.API\ExamenReactNet.Core\bin\Debug\netcoreapp3.1\ExamenReactNet.Core.deps.json
+C:\Users\Lautaro\Documents\projects\ExamenReactNet\ExamenReactNet.API\ExamenReactNet.Core\bin\Debug\netcoreapp3.1\ExamenReactNet.Core.dll
+C:\Users\Lautaro\Documents\projects\ExamenReactNet\ExamenReactNet.API\ExamenReactNet.Core\bin\Debug\netcoreapp3.1\ExamenReactNet.Core.pdb
+C:\Users\Lautaro\Documents\projects\ExamenReactNet\ExamenReactNet.API\ExamenReactNet.Core\obj\Debug\netcoreapp3.1\ExamenReactNet.Core.csprojAssemblyReference.cache
+C:\Users\Lautaro\Documents\projects\ExamenReactNet\ExamenReactNet.API\ExamenReactNet.Core\obj\Debug\netcoreapp3.1\ExamenReactNet.Core.AssemblyInfoInputs.cache
+C:\Users\Lautaro\Documents\projects\ExamenReactNet\ExamenReactNet.API\ExamenReactNet.Core\obj\Debug\netcoreapp3.1\ExamenReactNet.Core.AssemblyInfo.cs
+C:\Users\Lautaro\Documents\projects\ExamenReactNet\ExamenReactNet.API\ExamenReactNet.Core\obj\Debug\netcoreapp3.1\ExamenReactNet.Core.dll
+C:\Users\Lautaro\Documents\projects\ExamenReactNet\ExamenReactNet.API\ExamenReactNet.Core\obj\Debug\netcoreapp3.1\ExamenReactNet.Core.pdb
