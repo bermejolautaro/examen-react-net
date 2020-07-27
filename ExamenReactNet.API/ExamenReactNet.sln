@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamenReactNet.Data", "Exam
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamenReactNet.Api", "ExamenReactNet.Api\ExamenReactNet.Api.csproj", "{ACBC296D-7EC0-435B-B095-0124D2BB5D08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamenReactNet.Tests", "ExamenReactNet.Tests\ExamenReactNet.Tests.csproj", "{FA4C33F7-D79D-46CA-B3C5-EF6B990C905E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{ACBC296D-7EC0-435B-B095-0124D2BB5D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACBC296D-7EC0-435B-B095-0124D2BB5D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACBC296D-7EC0-435B-B095-0124D2BB5D08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA4C33F7-D79D-46CA-B3C5-EF6B990C905E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA4C33F7-D79D-46CA-B3C5-EF6B990C905E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA4C33F7-D79D-46CA-B3C5-EF6B990C905E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA4C33F7-D79D-46CA-B3C5-EF6B990C905E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

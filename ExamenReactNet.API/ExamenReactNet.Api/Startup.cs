@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using ExamenReactNet.Core.Models;
 using ExamenReactNet.Core.Repositories;
 using ExamenReactNet.Core.Services;
@@ -34,7 +35,10 @@ namespace ExamenReactNet.Api
 
             services.AddScoped<DbContext, ExamenReactNetDbContext>();
             services.AddScoped<ICarService, CarService>();
+            services.AddScoped<IBrandService, BrandService>();
             services.AddScoped<IRepository<Car>, CarRepository>();
+            services.AddScoped<IRepository<Brand>, Repository<Brand>>();
+
 
             services.AddDbContext<ExamenReactNetDbContext>(options =>
             {
@@ -45,6 +49,8 @@ namespace ExamenReactNet.Api
             });
 
             services.AddCors();
+
+            services.AddAutoMapper(typeof(Startup));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

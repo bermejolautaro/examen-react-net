@@ -39,6 +39,7 @@ class Autocomplete extends React.Component {
   }
 
   handleChange(event) {
+    this.props.onChange(null);
     this.setState({search: event.target.value}, () => {
       this.setState({isOpen: !!this.state.search && !!this.state.search.length})
     });
@@ -65,7 +66,7 @@ class Autocomplete extends React.Component {
       <div className="autocomplete">
         <div>Owner</div>
         <input id="autocomplete"
-               className="autocomplete-input"
+               className={`autocomplete-input ${this.props.inputClassName}`}
                placeholder="Search"
                value={this.state.search}
                onChange={(event) => this.handleChange(event)}>

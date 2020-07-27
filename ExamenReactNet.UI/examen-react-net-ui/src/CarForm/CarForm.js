@@ -2,26 +2,12 @@ import React from 'react';
 import Autocomplete from '../Autocomplete/Autocomplete';
 import './CarForm.css';
 
-const brands = [
-  {
-    id: 1,
-    name: 'Fiat'
-  },
-  {
-    id: 2,
-    name: 'Peugeot'
-  },
-  {
-    id: 3,
-    name: 'Audi'
-  }
-]
-
 class CarForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       canSubmit: false,
+      brands: [],
       licensePlate: '',
       brandId: 1,
       model: '',
@@ -33,8 +19,12 @@ class CarForm extends React.Component {
     this.updateForm = this.updateForm.bind(this);
   }
 
+  componentDidMount() {
+    fetch('http://localhost:5000/api/brands')
+    .then(res => res.json().then(data => this.setState({ brands: data })));
+  }
+
   updateForm(newState) {
-    console.log(newState);
     this.setState(newState, () => {
       const validations = [
         !!this.state.licensePlate && this.state.licensePlate.length === 8,
@@ -49,8 +39,6 @@ class CarForm extends React.Component {
   }
 
   handleSubmit(event) {
-    console.log(this.state);
-
     const data = {
       licensePlate: this.state.licensePlate,
       brandId: parseInt(this.state.brandId, 10),
@@ -66,7 +54,8 @@ class CarForm extends React.Component {
       body: JSON.stringify(data)
     };
 
-    fetch('http://localhost:5000/api/cars', requestOptions);
+    fetch('http://localhost:5000/api/cars', requestOptions)
+      .then(() => window.location.reload(false));
     event.preventDefault();
   }
 
@@ -75,9 +64,10 @@ class CarForm extends React.Component {
       <div className="form-container">
         <form onSubmit={this.handleSubmit}>
           <label className="form-row">
-            License Plate:
+            License Plate
           <input
               type="text"
+              className="carform-input"
               maxLength="8"
               value={this.state.licensePlate}
               onChange={(event) => this.updateForm({ licensePlate: event.target.value })}
@@ -92,7 +82,7 @@ class CarForm extends React.Component {
           <label className="form-row">
             Model
             <textarea
-              className="model-textarea"
+              className="carform-textarea"
               value={this.state.model}
               onChange={(event) => this.updateForm({ model: event.target.value })}>
             </textarea>
@@ -101,6 +91,7 @@ class CarForm extends React.Component {
           <label className="form-row">
             Doors
             <input
+              className="carform-input"
               type="number"
               value={this.state.doors}
               onChange={(event) => this.updateForm({ doors: event.target.value })}
@@ -108,9 +99,15 @@ class CarForm extends React.Component {
           </label>
 
           <div className="form-row">
-            <Autocomplete onChange={(value) => this.updateForm({ ownerEmail: value })} />
+            <Autocomplete 
+              inputClassName="carform-input"
+              onChange={(value) => this.updateForm({ ownerEmail: value })} />
           </div>
-          <input type="submit" value="Submit" disabled={!this.state.canSubmit} />
+          <input 
+            className="carform-submit"
+            type="submit" 
+            value="Submit" 
+            disabled={!this.state.canSubmit} />
         </form>
       </div>
 
@@ -119,12 +116,15 @@ class CarForm extends React.Component {
 
   getBrands() {
     return (
-      <select value={this.state.brand} onChange={(event) => this.updateForm({ brandId: event.target.value })}>
+      <select 
+        className="carform-select"
+        value={this.state.brand} 
+        onChange={(event) => this.updateForm({ brandId: event.target.value })}>
         {
-          brands.map((brand) => {
+          this.state.brands.map((brand) => {
             return (
-              <option key={brand.id} value={brand.id}>
-                {brand.name}
+              <option key={brand.brandId} value={brand.brandId}>
+                {brand.brandName}
               </option>
             )
           })

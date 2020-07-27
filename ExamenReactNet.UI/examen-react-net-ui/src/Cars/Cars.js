@@ -16,21 +16,32 @@ class Cars extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.state.cars.map(c => this.getCars(c))}
-      </div>
+      <table className="cars-table">
+        <thead>
+        <tr className="cars-table-header">
+          <th>License Plate</th>
+          <th>Model</th>
+          <th>Doors</th>
+          <th>Brand</th>
+          <th>Owner Email</th>
+        </tr>
+        </thead>
+        <tbody>
+          {this.state.cars.map(c => this.getCars(c))}
+        </tbody>
+      </table>
     )
   }
 
   getCars(c) {
     return (
-      <div key={c.id} className="car">
-       <div>License plate: {c.licensePlate}</div> 
-        <div>Model: {c.model}</div>
-        <div>Doors: {c.doors}</div>
-        <div>Brand: {c.brand.name}</div>
-        <div>Owner email: {c.owner}</div>
-      </div>
+      <tr key={c.carId} className="car">
+        <td className="cars-license-plate-row">{c.licensePlate}</td>
+        <td>{c.model}</td>
+        <td>{c.doors}</td>
+        <td>{c.brandName}</td>
+        <td>{c.ownerEmail}</td>
+      </tr>
     );
   }
 }

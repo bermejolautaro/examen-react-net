@@ -1,3 +1,25 @@
 .car {
   padding-bottom: 10px;
 }
+
+.cars-table {
+  width: 60%;
+  border-collapse: collapse;
+}
+
+.cars-table > tr, th, td {
+  border: 1px solid #ddd;
+  padding: 6px;
+}
+
+.cars-table > tbody > tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+.cars-table-header {
+  text-align: left;
+}
+
+.cars-license-plate-row {
+  text-transform: uppercase;
+}

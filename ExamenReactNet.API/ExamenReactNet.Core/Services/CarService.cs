@@ -2,6 +2,7 @@
 using ExamenReactNet.Core.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,11 +17,17 @@ namespace ExamenReactNet.Core.Services
             _repository = repository;
         }
 
-        public async Task<Car> CreateCarAsync(Car newCar)
+        public async Task<Result<Car>> CreateCarAsync(Car newCar)
         {
+            var validationResult = await new CreateCarValidator().ValidateAsync(newCar);
+
+            if (!validationResult.IsValid)
+                return Result<Car>.Error(validationResult.Errors.Select(x => x.ErrorMessage));
+
             await _repository.AddAsync(newCar);
             await _repository.CommitAsync();
-            return newCar;
+
+            return Result<Car>.Ok(newCar);
         }
 
         public async Task<IEnumerable<Car>> GetAllCarsAsync()

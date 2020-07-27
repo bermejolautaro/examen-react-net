@@ -9,6 +9,6 @@ namespace ExamenReactNet.Core.Services
     public interface ICarService
     {
         Task<IEnumerable<Car>> GetAllCarsAsync();
-        Task<Car> CreateCarAsync(Car newCar);
+        Task<Result<Car>> CreateCarAsync(Car newCar);
     }
 }
